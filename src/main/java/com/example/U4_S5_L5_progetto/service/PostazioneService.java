@@ -1,5 +1,6 @@
 package com.example.U4_S5_L5_progetto.service;
 
+import com.example.U4_S5_L5_progetto.model.Edificio;
 import com.example.U4_S5_L5_progetto.model.Postazione;
 import com.example.U4_S5_L5_progetto.repository.EdificioDAOrepository;
 import com.example.U4_S5_L5_progetto.repository.PostazioneDAOrepository;
@@ -25,7 +26,7 @@ public class PostazioneService {
     @Qualifier("postazione3")
     ObjectProvider<Postazione> postazione3provider;
 
-    public Postazione createPostazione1(){
+    public Postazione createPostazione1(Edificio edificio){
         return postazione1provider.getObject();
     }
 

@@ -22,4 +22,9 @@ public class EdificioService {
     public void saveEdificio(Edificio edificio){
         edificioDAO.save(edificio);
     }
+
+    public Edificio findEdificioById(long id){
+
+        return edificioDAO.findById(id).get();
+    }
 }
