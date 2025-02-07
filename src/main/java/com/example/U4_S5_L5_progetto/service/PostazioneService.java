@@ -27,15 +27,21 @@ public class PostazioneService {
     ObjectProvider<Postazione> postazione3provider;
 
     public Postazione createPostazione1(Edificio edificio){
-        return postazione1provider.getObject();
+        Postazione p = postazione1provider.getObject();
+        p.setEdificio(edificio);
+        return p;
     }
 
-    public Postazione createPostazione2(){
-        return postazione2provider.getObject();
+    public Postazione createPostazione2(Edificio edificio){
+        Postazione p = postazione2provider.getObject();
+        p.setEdificio(edificio);
+        return p;
     }
 
-    public Postazione createPostazione3(){
-        return postazione3provider.getObject();
+    public Postazione createPostazione3(Edificio edificio){
+        Postazione p = postazione3provider.getObject();
+        p.setEdificio(edificio);
+        return p;
     }
 
     public void savePostazione(Postazione postazione){

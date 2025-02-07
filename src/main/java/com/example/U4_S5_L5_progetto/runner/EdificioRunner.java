@@ -13,7 +13,7 @@ public class EdificioRunner implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        Edificio e1 = edificioService.createEdificio1();
-        edificioService.saveEdificio(e1);
+//        Edificio e1 = edificioService.createEdificio1();
+//        edificioService.saveEdificio(e1);
     }
 }

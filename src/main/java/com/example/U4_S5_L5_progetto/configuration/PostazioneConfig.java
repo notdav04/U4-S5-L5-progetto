@@ -19,11 +19,11 @@ public class PostazioneConfig {
         return new Postazione("secondo piano stanza 23", TipoPostazione.OPENSPACE, 50, edificio );
     }
     @Bean("postazione2")
-    public Postazione postazione2Bean( @Qualifier("edificio1") Edificio edificio){
+    public Postazione postazione2Bean(  Edificio edificio){
         return new Postazione("terzo piano stanza 34", TipoPostazione.SALA_RIUNIONI, 300, edificio );
     }
     @Bean("postazione3")
-    public Postazione postazione3Bean( @Qualifier("edificio1") Edificio edificio){
+    public Postazione postazione3Bean(  Edificio edificio){
         return new Postazione("quarto piano stanza 48", TipoPostazione.PRIVATO, 25, edificio );
     }
 }
