@@ -3,6 +3,8 @@ package com.example.U4_S5_L5_progetto.service;
 import com.example.U4_S5_L5_progetto.model.Postazione;
 import com.example.U4_S5_L5_progetto.model.Prenotazione;
 import com.example.U4_S5_L5_progetto.model.Utente;
+import com.example.U4_S5_L5_progetto.repository.EdificioDAOrepository;
+import com.example.U4_S5_L5_progetto.repository.PrenotazioneDAOrepository;
 import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -14,6 +16,9 @@ import java.time.LocalDate;
 public class PrenotazioneService {
 
     @Autowired
+    PrenotazioneDAOrepository prenotazioneDAO;
+
+    @Autowired
     @Qualifier("prenotazioneCustom")
     ObjectProvider<Prenotazione> prenotazioneProvider;
 
@@ -23,5 +28,9 @@ public class PrenotazioneService {
         p.setPostazione(postazione);
         p.setUtente(utente);
         return p;
+    }
+
+    public void savePrenotazione(Prenotazione prenotazione){
+        prenotazioneDAO.save(prenotazione);
     }
 }
