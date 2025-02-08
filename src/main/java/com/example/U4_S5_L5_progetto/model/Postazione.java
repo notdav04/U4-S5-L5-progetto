@@ -35,7 +35,6 @@ public class Postazione {
     private boolean disponibile = true;
 
     @OneToMany
-    @JoinColumn(name = "prenotazione_id")
     private List<Prenotazione> listaprenotazioni= new ArrayList<>();
 
 

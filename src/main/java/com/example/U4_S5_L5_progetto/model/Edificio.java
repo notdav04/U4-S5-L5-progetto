@@ -28,8 +28,7 @@ public class Edificio {
     @Column(nullable = false)
     private String citta;
 
-    @OneToMany(mappedBy = "edificio")//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-//    @JoinColumn(name="postazione_id")
+    @OneToMany(fetch = FetchType.EAGER)
     private List<Postazione> listaPostazioni= new ArrayList<>();
 
     public Edificio(String nome, String indirizzo, String citta) {

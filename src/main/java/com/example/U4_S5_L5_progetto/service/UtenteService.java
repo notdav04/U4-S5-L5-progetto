@@ -1,5 +1,6 @@
 package com.example.U4_S5_L5_progetto.service;
 
+import com.example.U4_S5_L5_progetto.model.Postazione;
 import com.example.U4_S5_L5_progetto.model.Utente;
 import com.example.U4_S5_L5_progetto.repository.EdificioDAOrepository;
 import com.example.U4_S5_L5_progetto.repository.UtenteDAOrepository;
@@ -40,5 +41,10 @@ public class UtenteService {
 
     public void saveUtente(Utente utente){
         utenteDAO.save(utente);
+        System.out.println("utente salvato con successo!");
+    }
+
+    public Utente findUtenteById(long id){
+        return utenteDAO.findById(id).get();
     }
 }

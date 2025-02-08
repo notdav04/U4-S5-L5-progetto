@@ -13,12 +13,12 @@ public class UtenteRunner implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
 
-        Utente u1 = utenteService.createUtente1();
-        Utente u2 = utenteService.createUtente2();
-        Utente u3 = utenteService.createUtente3();
-        utenteService.saveUtente(u1);
-        utenteService.saveUtente(u2);
-        utenteService.saveUtente(u3);
+//        Utente u1 = utenteService.createUtente1();
+//        Utente u2 = utenteService.createUtente2();
+//        Utente u3 = utenteService.createUtente3();
+//        utenteService.saveUtente(u1);
+//        utenteService.saveUtente(u2);
+//        utenteService.saveUtente(u3);
 
     }
 }
