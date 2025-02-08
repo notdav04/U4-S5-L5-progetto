@@ -21,6 +21,7 @@ public class EdificioService {
 
     public void saveEdificio(Edificio edificio){
         edificioDAO.save(edificio);
+        System.out.println("edificio salvato con successo!");
     }
 
     public Edificio findEdificioById(long id){

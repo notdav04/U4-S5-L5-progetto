@@ -39,5 +39,6 @@ public class Edificio {
 
     public void AddPostazione(Postazione p){
         this.listaPostazioni.add(p);
+
     }
 }
